@@ -1,9 +1,11 @@
+from collections import OrderedDict
 
 def debug_print(debug_msg=None, **kwargs):
 
     if debug_msg:
         print(debug_msg)
 
+    sorted_dict = OrderedDict()
     sorted_dict = {k: kwargs[k] for k in sorted(kwargs)}
 
     for key, value in sorted_dict.items():
